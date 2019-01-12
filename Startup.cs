@@ -22,8 +22,8 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<CatalagoContext>(options =>
-            //options.UseSqlServer(Configuration.GetConnectionString("CatalagoSQL")));
+            services.AddDbContext<CatalagoContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("CatalagoSQL")));
 
             //Adicionando escopo referente ao contexto, é global por aplicação.
             services.AddScoped<CatalagoContext, CatalagoContext>();

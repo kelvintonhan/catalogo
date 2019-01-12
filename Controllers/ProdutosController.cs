@@ -14,9 +14,9 @@ namespace API.Controllers
     public class ProdutosController : ControllerBase
     {
         private readonly ProdutoRepository ProdutoRepository; 
-        public ProdutosController()
+        public ProdutosController(ProdutoRepository produtoRepository)
         {
-           // ProdutoRepository = produtoRepository;
+            ProdutoRepository = produtoRepository;
         }
 
         [HttpGet]
